@@ -9,4 +9,5 @@ A branch is a copy of your project. When making changes to your project, you don
 * What is a commit? What makes a good commit message?
 In Git, a commit creates a save point of your project. In developing a project, first you edit a file in the working directory, then you save a copy of the current state of your project in the staging area with the add command. Last step, you commit the staged snapshot to the project history with a commit message. A good commit message would have to be concise and describe the work that has been done. 
 * What is a merge conflict?  
-While Git will take care of the merging process for you, there are situations where Git is stuck and will have you step in and tell it how to proceed. A merge conflict could be caused by two different developers changing the same line in the same file or one of them deleting the file that the other developer is working on.
+While Git will take care of the merging process for you, there are situations where Git is stuck and will have you step in and tell it how to proceed. A merge conflict could be caused by two different developers changing the same line in the same file or one of them deleting the file that the other developer is working on.  
+tagging attempt
