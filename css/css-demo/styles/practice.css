@@ -10,3 +10,15 @@
 .list {
 	font-size: 0.8em;
 }
+.selector1 {
+	color: red;
+}
+#selector2{
+	color: brown;
+}
+.selector1:hover {
+	background-color: #ff00ff;
+}
+ul li {
+	color: #000080;
+}
