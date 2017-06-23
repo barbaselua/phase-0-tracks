@@ -17,3 +17,9 @@ end
 puts "Fur color"
 fur_color = gets.chomp
 puts "Good candidate for adoption?"
+adoption = gets.chomp
+puts "Estimated age?"
+age = gets.chomp
+if age == ''
+	age = nil
+end
