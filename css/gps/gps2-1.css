@@ -1,3 +1,23 @@
+.column-1 {
+  display: inline-block;
+  width: 400px;
+  padding: 25px;
+  border: solid 1px;
+}
+
+.column-2 {
+  display: inline-block;
+  width: 400px;
+  padding: 80px 25px 23px 25px;
+  border: solid 1px;
+}
 body {
-	background: green;
+  position: relative;
+  margin: auto;
+  font-family: Helvetica;
+  background-color: turquoise;
+}
+h1 {
+  color: white;
+  font-size: 15px;
 }
