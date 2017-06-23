@@ -1,8 +1,9 @@
 puts "Hamster's name?"
 # this section asks the user for hamster's name.
 name = gets.chomp
+clerks_list_of_names = ['George', 'Anabella', 'Chris', 'Emily.']
 if name == ''
-	puts "Fluffy"
+	name = clerks_list_of_names[rand(4)]
 end
 puts "Volume level?"
 # this section asks the user for the noise level of the hamster.
