@@ -37,3 +37,9 @@ age = gets.chomp
 if age == ''
 	age = nil
 end
+puts "Hamster Info:"
+puts "Name: #{name}"
+puts "Volume level: #{volume}"
+puts "Fur color: #{fur_color}"
+puts "Adoption quality: #{adoption}"
+puts "Age: #{age}"
