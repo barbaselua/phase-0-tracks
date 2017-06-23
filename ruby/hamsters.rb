@@ -17,7 +17,15 @@ end
 puts "Fur color"
 fur_color = gets.chomp
 puts "Good candidate for adoption?"
+input = false
 adoption = gets.chomp
+if adoption == "yes" || adoption == "y"
+	input = true
+else
+	adoption == "no" || adoption == "n"
+	input = false
+end
+adoption = input
 puts "Estimated age?"
 age = gets.chomp
 if age == ''
