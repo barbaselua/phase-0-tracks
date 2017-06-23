@@ -13,4 +13,7 @@ volume = gets.chomp.to_i
 	else 
 		user_input = true
 	end
-end 
+end
+puts "Fur color"
+fur_color = gets.chomp
+puts "Good candidate for adoption?"
