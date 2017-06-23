@@ -1,0 +1,37 @@
+Robot elevator instruction algorithm
+
+- When in front of the elevator, press the upper button to return home or the down button to get to the lobby.
+- Wait for the elevator to reach the floor you currently are on.
+- Wait for the elevator doors to open.
+- When the elevator doors are open, move forward until inside of the elevator.
+- Make 180 degree turn.
+- Move right until reaching the wall.
+	- Press 7th button of the middle collumn of buttons to return home otherwise press the last button of the left collumn of buttons to get to the lobby.
+- Wait for the elevator to reach designanted floor.
+- Wait for the elevator doors to open.
+- When the elevator doors open, move forward to get out of evelator.
+
+
+Real life algorithm - making instant coffee 
+
+- Proceed to the kitchen.
+- When in the kitchen open left side cabinet.
+- Reach for the small white pot.
+- Move right until the sink is found.
+- Fill half of the pot with water.
+- Move left to the stove. 
+- Turn on the stove.
+- Set the pot on the stove.
+- Until the water temperature reaches the desired temperature:
+	- Move right.
+	- Open the middle cabinet.
+	- Grab the instant coffee container and a mug.
+	- Open the container.
+		- If the container is not empty, add 2 spoons of instant coffee to the mug otherwise cry, cry a lot. 
+	- Replace the container.
+- Take the pot off the stove.
+- Pour the water in the mug.
+- Stir your beverage.
+- Proceed to the desk.
+	- If the beverage is not extremely hot, sip.
+- Code on.
