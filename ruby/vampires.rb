@@ -41,5 +41,16 @@ elsif is_vampire && !(knows_their_age && likes_garlic && needs_insurance)
 else
   puts "Result inconclusive."
 end
+puts "Any allergies?"
+while true
+ allergies = gets.chomp
+  if allergies == 'done'
+  break
+  end 
+  if allergies == 'sunshine'
+    puts "Probably a vampire."
+    break
+  end
+end
 employee_number +=1
 end
