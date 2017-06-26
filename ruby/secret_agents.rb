@@ -29,3 +29,5 @@ encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
+decrypt(encrypt("swordfish"))
+#The nested method call above does NOT work.  It does not appear to take the nested method output as a legitimate input for the second method.  Rather, a NoMethodError was returned in regards to line 25 in regards to .length method used loop through the index.  Could not figure out why this did not work.
