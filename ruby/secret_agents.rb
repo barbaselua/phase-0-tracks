@@ -25,3 +25,7 @@ def decrypt(string_d)
   end
   puts string_d
 end
+encrypt("abc")
+encrypt("zed")
+decrypt("bcd")
+decrypt("afe")
