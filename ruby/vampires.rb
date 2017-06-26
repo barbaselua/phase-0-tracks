@@ -1,3 +1,5 @@
+employee_number = 0 
+until employee_number == 2
 puts "What is your name?"
 employee_name = gets.chomp
 if employee_name == 'Drake Cula' || employee_name == 'Tu Fang'
@@ -38,4 +40,6 @@ elsif is_vampire && !(knows_their_age && likes_garlic && needs_insurance)
   puts "Definitely a vampire."
 else
   puts "Result inconclusive."
+end
+employee_number +=1
 end
