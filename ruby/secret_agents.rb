@@ -25,9 +25,30 @@ def decrypt(string_d)
   end
   puts string_d
 end
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
-decrypt(encrypt("swordfish"))
+#encrypt("abc")
+#encrypt("zed")
+#decrypt("bcd")
+#decrypt("afe")
+#decrypt(encrypt("swordfish"))
 #The nested method call above does NOT work.  It does not appear to take the nested method output as a legitimate input for the second method.  Rather, a NoMethodError was returned in regards to line 25 in regards to .length method used loop through the index.  Could not figure out why this did not work.
+#Our Driver Code
+#ask user if they want to encrypt or decrypt a password
+agent_input = false
+until agent_input
+puts "Hello agent, would you like to encrypt or decrypt a password?"
+agent_desired_program = gets.chomp
+#encrypt user's passowrd
+  if agent_desired_program == "encrypt"
+    puts "Please enter password to encrypt."
+    encrypt(gets.chomp)
+    agent_input = true
+#decrypt user's password
+  elsif agent_desired_program == "decrypt"
+    puts "Please enter password to decrypt."
+    decrypt(gets.chomp)
+    agent_input = true
+#stops the program if user doesn't want to encrypt or decrypt a password.
+  else
+    puts "Not valid secret agent program."
+  end
+end
