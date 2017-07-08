@@ -18,3 +18,12 @@ else client_info[:flexibility] == 'no'
   client_info[:flexibility] = false
 end
 p client_info
+puts "Anything to update?"
+update = gets.chomp.to_sym 
+if update == 'none'.to_sym 
+  nil 
+else
+  puts "Please update #{update} now:"
+  client_info[update] = gets.chomp
+end 
+p client_info
