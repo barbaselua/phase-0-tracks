@@ -45,3 +45,8 @@ highways = {
       }
     } 
 }
+p highways[:'I-290'][:traffic_status]
+p highways[:'I-290'][:lines][:line_three][:passengers_in_fiftieth_car]
+p highways[:'I-290'][:lines][:line_three][:passengers_in_fiftieth_car][0]
+p highways[:'I-290'][:lines][:line_two][:moving_speed]
+p highways[:'I-190'][:traffic_info][:lines_moving]
