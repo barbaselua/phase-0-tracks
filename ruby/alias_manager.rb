@@ -43,3 +43,24 @@ def next_vowel(vowel_char)
 end
 #testing vowel method
 p next_vowel("aeio")
+# 
+#this method will change the consonants with the next consonant in the given vowel string
+def next_consonant(consonant_char)
+  consonants = "bcdfghjklmnprstvwxyz"
+  consonant_char = consonant_char.downcase
+  index = 0 
+  while index < consonant_char.length 
+  bad_consonant = consonant_char.index"z"
+    if bad_consonant != nil
+      consonant_char = "b"
+      index += 1
+    else
+    good_consonant = consonant_char[index]
+    good_index = consonants.index(good_consonant)+1
+    consonant_char[index] = consonants[good_index]
+    index += 1
+    end 
+  end 
+  consonant_char
+end 
+p next_consonant("bcdf")
