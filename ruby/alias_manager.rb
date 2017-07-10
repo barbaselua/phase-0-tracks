@@ -14,3 +14,11 @@
 #fake_name = "Vussit Gimodoe"
 # first method will take the name, convert the string into an array, reverse the letters of the array, have the reverse
 #name stored into a string
+def initial_method(name)
+      downcase_name = name.downcase
+      name_split = downcase_name.split('').reverse
+      name_array = name_split.join(' ')
+end
+#testing initial_method
+p initial_method("AnaMaria")
+#
