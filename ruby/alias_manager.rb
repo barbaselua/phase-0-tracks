@@ -64,3 +64,15 @@ def next_consonant(consonant_char)
   consonant_char
 end 
 p next_consonant("bcdf")
+#this method combines all the methods together.
+def implement_methods(str)
+  char_index = 0 
+  faked_name = ""
+  while char_index < str.length 
+    faked_name << (vowel_char(consonant_char(initial_method(str))))
+    char_index += 1 
+  end 
+  faked_name
+end
+implement_methods("Felicia Torres")
+# this is as far as my program wanted to run. 
