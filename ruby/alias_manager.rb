@@ -22,3 +22,24 @@ end
 #testing initial_method
 p initial_method("AnaMaria")
 #
+#next method will take care of changing the vowels with the next vowel in the given vowel string.
+def next_vowel(vowel_char)
+  vowels= "aeiou"
+  vowel_char = vowel_char.downcase
+  index = 0
+  while index < vowel_char.length
+    bad_vowel = vowel_char.index"u"
+    if bad_vowel != nil
+      vowel_char = "a"
+      index += 1
+    else 
+    good_vowel = vowel_char[index]
+    good_index = vowels.index(good_vowel)+1
+    vowel_char[index] = vowels[good_index]
+    index += 1
+    end 
+  end
+  vowel_char
+end
+#testing vowel method
+p next_vowel("aeio")
