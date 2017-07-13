@@ -1,12 +1,13 @@
 # SPECIES ----------
-# My favorite type of Pomsky
+# Pomsky
 # CHARACTERISTICS ----------
 # Breed: cross-breed
 # Pomeranian inheritance: size
 # Husky inheritance: looks
-# Eye color: blue
-# Fur: gray&white
+# Eye color: varies
+# Fur: varies
 # Height: 10'-15'
+# Lifespan: 13y-15y 
 # BEHAVIOR ----------
 # Playful
 # Protective
