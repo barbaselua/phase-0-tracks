@@ -10,9 +10,13 @@ class Puppy
   def roll_over
   	puts "*rolls over*"
   end 
+  def dog_years(y)
+  	puts y*7
+  end
 end
   
 Bud = Puppy.new
 puts Bud.fetch('ball')
 puts Bud.speak(3)
 puts Bud.roll_over
+puts Bud.dog_years(3)
