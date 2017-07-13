@@ -16,6 +16,9 @@ class Puppy
   def jump
   	puts "Whenever I jump, it means I am happy to see you"
   end
+  def initialize
+  	puts "Initializing new puppy instance ..."
+  end
 end
   
 Bud = Puppy.new
