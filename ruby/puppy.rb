@@ -1,5 +1,5 @@
 # SPECIES ----------
-# Pomsky
+# Pomsky_Puppy
 # CHARACTERISTICS ----------
 # Breed: cross-breed
 # Pomeranian inheritance: size
@@ -12,3 +12,7 @@
 # Playful
 # Protective
 # Lick
+class Pomsky_Puppy
+end
+Rex = Pomsky_Puppy.new
+Max = Pomsky_Puppy.new
