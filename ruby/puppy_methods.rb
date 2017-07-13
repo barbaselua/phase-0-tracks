@@ -4,6 +4,7 @@ class Puppy
     puts "I brought back the #{toy}!"
     toy
   end
-
 end
-
+  
+Bud = Puppy.new
+puts Bud.fetch('ball')
