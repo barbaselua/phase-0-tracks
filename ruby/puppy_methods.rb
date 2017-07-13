@@ -13,6 +13,9 @@ class Puppy
   def dog_years(y)
   	puts y*7
   end
+  def jump
+  	puts "Whenever I jump, it means I am happy to see you"
+  end
 end
   
 Bud = Puppy.new
@@ -20,3 +23,4 @@ puts Bud.fetch('ball')
 puts Bud.speak(3)
 puts Bud.roll_over
 puts Bud.dog_years(3)
+puts Bud.jump
