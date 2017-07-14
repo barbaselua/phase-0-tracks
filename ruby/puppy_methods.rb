@@ -46,7 +46,10 @@ end
 kitty = Cats.new
 kitty.speak(5)
 kitty.fetch("cotton mouse")
- 
+shelter = []
+50.times do 
+  shelter.push(garfield = Cats.new)
+end 
 
 
 
