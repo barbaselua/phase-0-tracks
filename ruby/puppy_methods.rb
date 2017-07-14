@@ -50,7 +50,10 @@ shelter = []
 50.times do 
   shelter.push(garfield = Cats.new)
 end 
-
+shelter.each do |cat|
+  cat.speak
+  cat.fetch("cotton ball")
+end 
 
 
 
