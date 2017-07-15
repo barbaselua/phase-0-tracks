@@ -13,3 +13,8 @@ class Santa
 		@age = 0
 	end 
 end 
+santas = []
+santas << Santa.new("female", "black")
+santas << Santa.new("male", "asian")
+santas << Santa.new("agender", "Latino")
+santas << Santa.new("N/A", "white")
