@@ -23,7 +23,10 @@ end
 class Teachers
 	include Shout
 end 
+# driver code
 student = Students.new
+p student.yell_angrily("My brain hurts")
 p student.yelling_happily
 teacher = Teachers.new
 p teacher.yell_angrily("You got it, kid")
+p teacher.yelling_happily
