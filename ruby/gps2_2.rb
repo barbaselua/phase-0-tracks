@@ -54,4 +54,12 @@ def update_quantity(grocery_list, item_name, item_quantity)
 	grocery_list[item_name] = item_quantity 
 	grocery_list
 end 
+# Method to print a list and make it look pretty
+# input: the hash created previously
+# steps: print each item inside of the hash
+# output:list of items inside hash
+
+def print_hashes(hash_of_items)
+	hash_of_items.each { |key, value| puts "#{key} #{value}"}
+end
 
