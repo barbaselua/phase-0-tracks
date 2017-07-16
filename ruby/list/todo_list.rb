@@ -10,6 +10,11 @@ class TodoList
 
   def add_item(new_item)
     @list.push(new_item)
-  end  
+  end
+
+  def delete_item(newest_item)
+    @list.delete(newest_item)
+    @list
+    end  
 
 end 
