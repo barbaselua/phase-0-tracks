@@ -32,4 +32,16 @@ def add_item(grocery_list, item_name, item_quantity=nil)
 	grocery_list[item_name] = item_quantity 
 	grocery_list
 end
+# Method to remove an item from the list
+# input: list and item name
+# steps: 
+	#define method
+	#remove item
+	#return grocery list
+# output: gorcery list without removed item
+def remove_item(grocery_list, item_name)
+	grocery_list.delete(item_name)
+	grocery_list
+end 
+
 
