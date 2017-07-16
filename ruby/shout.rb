@@ -1,4 +1,4 @@
-module Shout
+=begin module Shout
 	def self.yell_angrily(words)
 		words + "!!!" + ":(" 
 	end
@@ -8,3 +8,12 @@ module Shout
 end 
 p Shout.yelling_happily
 p Shout.yell_angrily("My brain hurts")
+=end 
+module Shout 
+	def yell_angrily(words)
+		words + "!!!" + ":("
+	end 
+	def yelling_happily
+	"Yaaay Ruby!" 
+	end
+end
