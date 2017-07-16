@@ -43,5 +43,15 @@ def remove_item(grocery_list, item_name)
 	grocery_list.delete(item_name)
 	grocery_list
 end 
-
+# Method to update the quantity of an item
+# input: grocery list item quantity
+# steps:
+	#define method
+	#update quantity for item
+	#return grocery list
+# output: grocery list with updated quantity
+def update_quantity(grocery_list, item_name, item_quantity)
+	grocery_list[item_name] = item_quantity 
+	grocery_list
+end 
 
