@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :age
+	attr_accessor :gender, :ethnicity, :reindeer_ranking
 	def speak 
 		puts "Ho, ho, ho! Haaappy holidays!"
 	end 
@@ -12,12 +14,6 @@ class Santa
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end 
-	def age 
-		@age 
-	end
-	def ethnicity
-		@ethnicity
-	end 
 	def celebrate_birthday
 		@age += 1
 	end 
@@ -27,9 +23,6 @@ class Santa
 			@reindeer_ranking.push(reindeer_name)
 		end 
 	end 
-	def gender=(new_gender)
-		@gender
-	end
 end 
 # driver code 
 santas = []
