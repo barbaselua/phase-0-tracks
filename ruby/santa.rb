@@ -33,3 +33,6 @@ end
 #p santas
 #santa = Santa.new("n/a", "n/a")
 #p santa.gender = "no gender at all"
+100.times do 
+	p Santa.new
+end 
