@@ -17,3 +17,6 @@ module Shout
 	"Yaaay Ruby!" 
 	end
 end
+class Students
+	include Shout
+end 
