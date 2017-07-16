@@ -62,4 +62,13 @@ end
 def print_hashes(hash_of_items)
 	hash_of_items.each { |key, value| puts "#{key} #{value}"}
 end
+# driver code 
+list = create_list("")
+p list = add_item(list, "Lemonade", 2)
+p list = add_item(list, "Tomatoes", 3)
+p list = add_item(list, "Onions", 1)
+p list = add_item(list, "Ice Cream", 4)
+p list = remove_item(list, "Lemonade")
+p list = update_quantity(list, "Ice Cream", 1)
+print_hashes(list)
 
