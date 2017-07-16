@@ -11,7 +11,7 @@ p Shout.yell_angrily("My brain hurts")
 =end 
 module Shout 
 	def yell_angrily(words)
-		words + "!!!" + ":("
+		words + "!!!" + ":)"
 	end 
 	def yelling_happily
 	"Yaaay Ruby!" 
@@ -23,3 +23,7 @@ end
 class Teachers
 	include Shout
 end 
+student = Students.new
+p student.yelling_happily
+teacher = Teachers.new
+p teacher.yell_angrily("You got it, kid")
