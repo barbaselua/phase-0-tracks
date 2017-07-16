@@ -18,12 +18,15 @@ class Santa
 	def ethnicity
 		@ethnicity
 	end 
+	def celebrate_birthday
+		@age += 1
+	end 
 end 
 # driver code 
-#santas = []
-#santas << Santa.new("female", "black")
-#santas << Santa.new("male", "asian")
-#santas << Santa.new("agender", "Latino")
-#santas << Santa.new("N/A", "white")
-
+santas = []
+santas << Santa.new("female", "black")
+santas << Santa.new("male", "asian")
+santas << Santa.new("agender", "Latino")
+santas << Santa.new("N/A", "white").celebrate_birthday
+p santas
 	
