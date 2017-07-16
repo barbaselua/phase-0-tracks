@@ -20,3 +20,6 @@ end
 class Students
 	include Shout
 end 
+class Teachers
+	include Shout
+end 
