@@ -27,12 +27,16 @@ class Santa
 			@reindeer_ranking.push(reindeer_name)
 		end 
 	end 
+	def gender=(new_gender)
+		@gender
+	end
 end 
 # driver code 
 santas = []
 santas << Santa.new("female", "black")
 santas << Santa.new("male", "asian")
 santas << Santa.new("agender", "Latino").get_mad_at('Rudolph')
-santas << Santa.new("N/A", "white").celebrate_birthday
+santas << Santa.new("N/A", "white")
 p santas
-	
+santa = Santa.new("n/a", "n/a")
+p santa.gender = "no gender at all"
