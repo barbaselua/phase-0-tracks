@@ -3,6 +3,8 @@ module Shout
 		words + "!!!" + ":(" 
 	end
 	def self.yelling_happily
-		puts "Yaaaay Ruby!"
+		 "Yaaaay Ruby!"
 	end 
 end 
+p Shout.yelling_happily
+p Shout.yell_angrily("My brain hurts")
