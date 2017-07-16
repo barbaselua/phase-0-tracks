@@ -7,10 +7,10 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 	end 
-	def initialize(gender, ethnicity)
+	def initialize
 		puts "Initializing Santa instance..."
-		@gender = gender
-		@ethnicity = ethnicity
+		@gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"].sample
+		@ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"].sample
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end 
