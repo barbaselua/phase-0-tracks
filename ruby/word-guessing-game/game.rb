@@ -6,4 +6,8 @@ class WordGuessingGame
     @win
   end
 
+  def get_current_state
+    @current_state
+  end
+
 end 
