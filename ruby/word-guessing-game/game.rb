@@ -26,4 +26,8 @@ class WordGuessingGame
     end 
   end
 
+  def unique(character)
+    @words.split(''.uniq)
+  end 
+
 end 
