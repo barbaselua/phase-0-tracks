@@ -26,8 +26,19 @@ class WordGuessingGame
     end 
   end
 
+#does not work
   def unique(character)
     @words.split(''.uniq)
   end 
+
+  def win 
+    if @word == @current_state 
+      puts "Yay! You won!"
+      @win = true
+    else 
+      puts "Sorry! Better luck next time!"
+      @win = true
+    end
+  end
 
 end 
