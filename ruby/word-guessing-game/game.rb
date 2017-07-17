@@ -36,9 +36,38 @@ class WordGuessingGame
       puts "Yay! You won!"
       @win = true
     else 
-      puts "Sorry! Better luck next time!"
+      puts "Sorry! You lost! Better luck next time!"
       @win = true
     end
   end
 
 end 
+
+#driver code 
+puts "You are now playing Word Guessing!"
+puts "Player one, please write a word:"
+word_to_be_guessed = gets.chomp 
+game = WordGuessingGame.new(word_to_be_guessed)
+letters = []
+tries = word_to_be_guessed.length
+puts "Player two, guess a letter."
+guess = gets.chomp 
+game.guess_letter(guess)
+letters << guess
+until tries == 1 
+  if !word_to_be_guessed.include? guess
+    game.guess_letter(guess)
+    letters << guess
+      puts "Wrong! Please try another letter."
+    p game.get_current_state
+    guess = gets.chomp 
+    game.guess_letter(guess)
+    letters << guess
+  else 
+    guess = gets.chomp
+    game.guess_letter(guess)
+    letters << guess
+  end
+  tries -= 1 
+end 
+game.win 
