@@ -23,7 +23,7 @@ class Puppy
   end
 end
   
-Bud = Puppy.new
+bud = Puppy.new
 bud.fetch('ball')
 bud.speak(3)
 bud.roll_over
@@ -44,7 +44,7 @@ class Cats
 end
 #driver code 
 kitty = Cats.new
-kitty.speak(5)
+kitty.speak
 kitty.fetch("cotton mouse")
 shelter = []
 50.times do 
