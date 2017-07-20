@@ -12,4 +12,6 @@ function reverse(string) {
 	}
 	return newString;
 }
-console.log(reverse("hello"));
+// driver code
+var reversedString = (reverse("hello"));
+console.log(reversedString);
