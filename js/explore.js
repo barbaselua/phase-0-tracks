@@ -12,3 +12,4 @@ function reverse(string) {
 	}
 	return newString;
 }
+console.log(reverse("hello"));
