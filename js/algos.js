@@ -12,3 +12,12 @@ declare a function that takes an array as parameter
 			assign the array element to the variable
 	return the variable
 */
+function theLongestElement(array) {
+	longest = "";
+	for (var i = 0; i < array.length; i++) {
+		if (array[i] > longest) {
+			longest = array[i];
+		}
+	}
+	return longest;
+}
