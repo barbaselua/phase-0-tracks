@@ -21,3 +21,8 @@ function theLongestElement(array) {
 	}
 	return longest;
 }
+// driver code
+strings = ["long", "longer", "longer"];
+console.log(theLongestElement(strings));
+numbers = [2, 4, 15, 234, 0]
+console.log(theLongestElement(numbers));
