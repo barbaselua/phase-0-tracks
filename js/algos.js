@@ -22,7 +22,10 @@ function theLongestElement(array) {
 	return longest;
 }
 // driver code
-strings = ["long", "longer", "longer"];
+strings = ["long", "longest", "longer"];
 console.log(theLongestElement(strings));
 numbers = [2, 4, 15, 234, 0]
 console.log(theLongestElement(numbers));
+// after testing the function, it turned out it doesn't work very well on phrases.
+// calling the function on this array, strings = ["long", "long phrase", "longest", "longer"];,
+//will output 'longest' instead of 'long phrase'.
