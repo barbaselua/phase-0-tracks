@@ -26,6 +26,13 @@ class VirusPredictor
   end
 
   private
+  # the keyword 'private' will keep all the methods defined from now accessible only inside the class.
+  # the private methods will be available to be called from methods defined inside the class, but not outside of it.
+  # if the keyword would be moved above the virus_effect method, all of our instance methods would be private 
+  # so we would be able to create new instances of our class, but there would be no instance methods we could call
+  # on those.
+  # I would use 'private' if I were to create a program that would involve passwords. I would want the passwords to 
+  # be private.
   def predicted_deaths
     # predicted deaths is solely based on population density
 
