@@ -35,6 +35,14 @@ function Car(brand, mileage, hybrid, singleOwner, color) {
 	this.startEngine = function() {console.log("Vruum! Vruum!");} ;
 	console.log("This could be your new car: ")
 }
-
-
+// driver code 
+console.log("Hey, mister auto-dealer. I need a new car.");
+var car = new Car("Honda", 15000, true, false, "red");
+console.log(car);
+console.log("Check out how she sounds: ");
+car.startEngine();
+console.log("Like it?");
+console.log("Hey, mister auto-dealer. I need a new car.");
+var otherCar = new Car("Toyota", 50000, false, true, "white");
+console.log(otherCar);
 
