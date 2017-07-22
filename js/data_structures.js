@@ -26,7 +26,15 @@ if (names.length != colors.length) {
 console.log(horses);
 
 //release 2
-
+function Car(brand, mileage, hybrid, singleOwner, color) {
+	this.brand = brand;
+	this.mileage = mileage;
+	this.hybrid = hybrid;
+	this.singleOwner = singleOwner;
+	this.color = color;
+	this.startEngine = function() {console.log("Vruum! Vruum!");} ;
+	console.log("This could be your new car: ")
+}
 
 
 
