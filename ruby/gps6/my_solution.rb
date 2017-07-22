@@ -5,21 +5,26 @@
 
 # EXPLANATION OF require_relative
 # links the current working file with external file in order to pass
-# data from one file to the other.
+# data from the external file to the working one.
 # require loads files that already exist inside ruby.
 require_relative 'state_data'
 
 class VirusPredictor
- # declaring a set of attributes that attaches to a new class instance when it is created
- # and when a new class instance is created these attributes
- # aplly to that class instance.
+ # AFTER RECAPPING ON MY OWN, I WASN'T COMPLETELY SATISFIED WITH OUR INITIAL COMMENT SO I DECIDED TO REPHRASE.
+ # I HOPE IT IS OK.
+ # declaring a set of attributes/instance variables that will allow us to pass in data
+ # and make it available anywhere inside the class. when creating and outputting an instance of a class,
+ # our program will print out the attibute as well.
+ # apply to that class instance.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
- # predicting outcomes based on a formula that takes the desnity, polulatin size and state as parameters.
+ # predicting outcomes based on a formula that takes the density, population size and state as parameters.
  # predicting speed of spead
+ # after refactoring and an office hour my partner and I attended together I feel like I should rephrase again
+ # this method just calls on the predicted deaths and speed of spread methods.
   def virus_effects
     predicted_deaths
     speed_of_spread
@@ -36,6 +41,9 @@ class VirusPredictor
   def predicted_deaths
     # predicted deaths is solely based on population density
 
+    # based on a formula that uses the instance variables @population_density and @population, 
+    # this method calculates how many deaths are predicted in a state. 
+    # the output of this method will be a string containing the prediction in a state.
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -55,6 +63,10 @@ class VirusPredictor
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
+
+    # based on a formula that uses the instance variable @population_density, this method calculates
+    # the speed the virus spreads. 
+    # the output will be a string containing the information the formula returns.
     speed = 0.0
 
     if @population_density >= 200
