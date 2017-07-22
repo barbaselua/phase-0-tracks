@@ -26,7 +26,7 @@ class VirusPredictor
   end
 
   private
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
 
     if @population_density >= 200
