@@ -1,17 +1,14 @@
-/*
-declare a function that takes an array as parameter
-	declare a variable to be used to store the longest element of the array
-	the variable shoud have the value of the first element in the array in order 
-	for the function to be able to work on phrases as well
-	iterate through every element in the array
+/* release 0 (find the longest phrase)
+declare a function that takes an array as parameter (INPUT)
+	declare a variable to be used to store the element of the array 
+	when iterating
+	iterate through the array
 		set the counter at 0 
-		set the 'WHILE' condition - the iteration will take place as long as our condition is false
+		set the WHILE condition - the iteration will take place as long as our condition is false
 		increment the counter by 1
-		declare a conditional statement
-			compare the array element with the variable
 			IF the array element is longer than the variable
 			assign the array element to the variable
-	return the variable
+	return the variable (OUTPUT)
 */
 function theLongestElement(array) {
 	longest = array[0];
@@ -29,3 +26,31 @@ phraseStrings = ["long phrase", "longest phrase", "longer phrase"];
 console.log(theLongestElement(phraseStrings));
 numbers = [2, 4, 15, 234, 0]
 console.log(theLongestElement(numbers));
+
+
+/* release 1 (find a key-value match)
+declare a function that takes 2 objects as parameters. (INPUT)
+	declare variables to store each objects' keys 
+	declare a variable that will store each key-value pair when iterating
+	iterate through the array
+		set the counter at 0
+		set the WHILE condition
+		increment the counter by 1
+		IF a match of key-value is found 
+		the function should evaluate to true
+		else false. (OUTPUT)
+*/
+ function match(one, two) {
+ 	var oneKeys = Object.keys(one);
+ 	var twoKeys = Object.keys(two);
+ 	var keys = '';
+ 	for (var i = 0; i < oneKeys.length; i++) {
+ 		keys = oneKeys[i];
+ 		if (one[keys] == two[keys]) {
+ 			return true;
+ 		}
+ 	}
+ 			return false;	
+ }
+ 
+ 
