@@ -53,4 +53,12 @@ declare a function that takes 2 objects as parameters. (INPUT)
  			return false;	
  }
  
- 
+ // driver code
+ // true output
+ var person1 = {name: "Steven", age: 54};
+ var person2 = {name: "Tamir", age: 54};
+ console.log(match(person1, person2));
+ // false output
+ var animal1 = {animal: "Dog", legs: 4};
+ var animal2 = {animal: "Doggo", legs: 3};
+console.log(match(animal1, animal2));
