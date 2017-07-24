@@ -52,7 +52,7 @@ declare a function that takes 2 objects as parameters. (INPUT)
  	}
  			return false;	
  }
- 
+
  // driver code
  // true output
  var person1 = {name: "Steven", age: 54};
@@ -62,3 +62,29 @@ declare a function that takes 2 objects as parameters. (INPUT)
  var animal1 = {animal: "Dog", legs: 4};
  var animal2 = {animal: "Doggo", legs: 3};
 console.log(match(animal1, animal2));
+
+
+/* release 2 (generate random test data)
+declare a function that takes an integer as parameter (INPUT)
+  create a new array
+  set up a for loop to run for as many times as the parameter indicates
+  	set the counter at 0
+  	set the 'WHILE' condition
+  	increment the counter by 1
+  	declare a variable, letters, that stores the characters to be used 
+  		when creating our words
+  	set up an empty variable (it will store the word after randomly choosing
+  		a letter and a length)	
+  	set up a new for loop to run for a random number of times
+  		set the counter to 0
+  		generate a random number (1 to 10) using the math method
+  		increment the counter by 1
+  		generate a random letter using the math method	
+  		pass the letters to the empty variable
+  	push the words to the array
+	return the array
+print function
+
+
+	
+*/
