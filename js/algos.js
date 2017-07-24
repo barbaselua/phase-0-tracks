@@ -98,4 +98,13 @@ function ranNum(x) {
 	}
 	return (arrayOfStrings);
 }
-console.log(ranNum(4));
+// driver code
+// console.log(ranNum(4));
+var times = 10;
+for (var i = 0; i < times-1; i++) {
+  console.log(z = ranNum(3)); {
+    console.log(theLongestElement(z))
+  }
+} 
+// it doesn't always print the longest phrase.
+// sometimes it does, sometimes it doesn't.
