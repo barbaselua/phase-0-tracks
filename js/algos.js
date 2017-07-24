@@ -84,7 +84,18 @@ declare a function that takes an integer as parameter (INPUT)
   	push the words to the array
 	return the array
 print function
-
-
-	
 */
+function ranNum(x) {
+	var arrayOfStrings = [];
+	for (var k = 0; k < x; k++) {
+		var letters = "abcdefghijklmnoprstuvwxyz";
+		var words = "";
+	  for (var i = 0; i < Math.floor((Math.random() * 10) + 1); i++) {
+		  var rand_letter = Math.floor(Math.random() *(letters.length));
+		  	words = words + letters.charAt(rand_letter);
+		}
+		arrayOfStrings.push(words)
+	}
+	return (arrayOfStrings);
+}
+console.log(ranNum(4));
