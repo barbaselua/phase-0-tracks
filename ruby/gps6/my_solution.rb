@@ -4,27 +4,46 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# links the current working file with external file in order to pass
+# data from the external file to the working one.
+# require loads files that already exist inside ruby.
 require_relative 'state_data'
 
 class VirusPredictor
-
+ # AFTER RECAPPING ON MY OWN, I WASN'T COMPLETELY SATISFIED WITH OUR INITIAL COMMENT SO I DECIDED TO REPHRASE.
+ # I HOPE IT IS OK.
+ # declaring a set of attributes/instance variables that will allow us to pass in data
+ # and make it available anywhere inside the class. when creating and outputting an instance of a class,
+ # our program will print out the attibute as well.
+ # apply to that class instance.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
-
+ # predicting outcomes based on a formula that takes the density, population size and state as parameters.
+ # predicting speed of spead
+ # after refactoring and an office hour my partner and I attended together I feel like I should rephrase again
+ # this method just calls on the predicted deaths and speed of spread methods.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
-
-  def predicted_deaths(population_density, population, state)
+  # the keyword 'private' will keep all the methods defined from now accessible only inside the class.
+  # the private methods will be available to be called from methods defined inside the class, but not outside of it.
+  # if the keyword would be moved above the virus_effect method, all of our instance methods would be private 
+  # so we would be able to create new instances of our class, but there would be no instance methods we could call
+  # on those.
+  # I would use 'private' if I were to create a program that would involve passwords. I would want the passwords to 
+  # be private.
+  def predicted_deaths
     # predicted deaths is solely based on population density
+
+    # based on a formula that uses the instance variables @population_density and @population, 
+    # this method calculates how many deaths are predicted in a state. 
+    # the output of this method will be a string containing the prediction in a state.
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
@@ -41,9 +60,13 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
+
+    # based on a formula that uses the instance variable @population_density, this method calculates
+    # the speed the virus spreads. 
+    # the output will be a string containing the information the formula returns.
     speed = 0.0
 
     if @population_density >= 200
@@ -82,6 +105,14 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
+# STATE_DATA.each do |state_name, pop_info| 
+#   puts state_name 
+#   puts pop_info[:population_density]
+# end 
 
+
+STATE_DATA.each do |state_name, pop_info|
+  VirusPredictor.new(state_name, pop_info[:population_density], pop_info[:population]).virus_effects
+end 
 #=======================================================================
 # Reflection Section
