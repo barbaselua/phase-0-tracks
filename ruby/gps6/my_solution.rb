@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge with Diane H.
+# We spent 2.5(ish) hours on this challenge.
 
 # EXPLANATION OF require_relative
 # links the current working file with external file in order to pass
@@ -116,3 +116,18 @@ STATE_DATA.each do |state_name, pop_info|
 end 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  # the keys representing the names of the states need to be user 
+  # friendly too so they have to be pretty. that's why we choose to have string keys that can be capitalized
+  # and don't require the use of an underscore when a name is a 2 words name. having strings as keys
+  # require the use of the hash rocket (=>). 
+  # the keys representing the population data needs to just be programmer readable so we choose a symbol
+  # that is more practical.
+# What does require_relative do? How is it different from require?
+  # see comments on lines 6 to 9.
+# What are some ways to iterate through a hash?
+  # the most popular are .each and map.
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  # -
+# What concept did you most solidify in this challenge?
+  # without a doubt instance variables and instance methods.
