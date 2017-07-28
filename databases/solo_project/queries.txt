@@ -12,6 +12,12 @@ sqlite> SELECT * FROM books;
 7|George Eliot|Middlemarch|3|false|4
 
 
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE locations SET name="Harold Washington Library Center" WHERE name="Harold Washington";
+
+
+
 
 
 
