@@ -64,6 +64,8 @@ Madame Bovary|true|Logan Square Branch
 Moby-Dick|false|Wrightwood Ashburn Branch
 Great expectations|false|Logan Square Branch
 Middlemarch|false|Wrightwood Ashburn Branch
-sqlite>
 
 
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM books where author = "Miguel de Cervantes";
