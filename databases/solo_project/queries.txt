@@ -1,0 +1,17 @@
+1. Display the information in one table (either table is fine).
+
+
+sqlite> SELECT * FROM books;
+
+1|Marcel Proust|In search of lost time|3|true|1
+2|Miguel de Cervantes|Don Quixote|2|false|3
+3|Leo Tolstoy|Ana Karenina|5|true|3
+4|Gustave Flaubert|Madame Bovary|8|true|2
+5|Herman Melville|Moby-Dick|1|false|4
+6|Charles Dickens|Great expectations|7|false|2
+7|George Eliot|Middlemarch|3|false|4
+
+
+
+
+
