@@ -17,7 +17,17 @@ sqlite> SELECT * FROM books;
 sqlite> UPDATE locations SET name="Harold Washington Library Center" WHERE name="Harold Washington";
 
 
+3. Display the information in both tables using one query.
 
+sqlite> SELECT * FROM books, locations WHERE books.location = locations.id;
+
+1|Marcel Proust|In search of lost time|3|true|1|1|Lincoln Belmont Branch
+2|Miguel de Cervantes|Don Quixote|2|false|3|3|Harold Washington Library Center
+3|Leo Tolstoy|Ana Karenina|5|true|3|3|Harold Washington Library Center
+4|Gustave Flaubert|Madame Bovary|8|true|2|2|Logan Square Branch
+5|Herman Melville|Moby-Dick|1|false|4|4|Wrightwood Ashburn Branch
+6|Charles Dickens|Great expectations|7|false|2|2|Logan Square Branch
+7|George Eliot|Middlemarch|3|false|4|4|Wrightwood Ashburn Branch
 
 
 
