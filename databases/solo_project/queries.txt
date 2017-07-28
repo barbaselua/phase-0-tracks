@@ -30,4 +30,40 @@ sqlite> SELECT * FROM books, locations WHERE books.location = locations.id;
 7|George Eliot|Middlemarch|3|false|4|4|Wrightwood Ashburn Branch
 
 
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT books.author, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+Marcel Proust|Lincoln Belmont Branch
+Miguel de Cervantes|Harold Washington Library Center
+Leo Tolstoy|Harold Washington Library Center
+Gustave Flaubert|Logan Square Branch
+Herman Melville|Wrightwood Ashburn Branch
+Charles Dickens|Logan Square Branch
+George Eliot|Wrightwood Ashburn Branch
+
+or
+
+sqlite> SELECT books.title, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+In search of lost time|Lincoln Belmont Branch
+Don Quixote|Harold Washington Library Center
+Ana Karenina|Harold Washington Library Center
+Madame Bovary|Logan Square Branch
+Moby-Dick|Wrightwood Ashburn Branch
+Great expectations|Logan Square Branch
+Middlemarch|Wrightwood Ashburn Branch
+
+or 
+sqlite> SELECT books.title, books.availability, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+In search of lost time|true|Lincoln Belmont Branch
+Don Quixote|false|Harold Washington Library Center
+Ana Karenina|true|Harold Washington Library Center
+Madame Bovary|true|Logan Square Branch
+Moby-Dick|false|Wrightwood Ashburn Branch
+Great expectations|false|Logan Square Branch
+Middlemarch|false|Wrightwood Ashburn Branch
+sqlite>
+
 
