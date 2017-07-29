@@ -1,3 +1,4 @@
+ Release 2
 1. Display the information in one table (either table is fine).
 
 
@@ -69,3 +70,34 @@ Middlemarch|false|Wrightwood Ashburn Branch
 5. Delete an item that meets some condition (you can choose a condition that makes sense).
 
 sqlite> DELETE FROM books where author = "Miguel de Cervantes";
+
+
+Release 3
+2. Try a few different joins in your database, and record the commands and the output in queries.txt.
+ # my locations table doesn't have enough columns to demonstrate the inner, left, right and full joins properly, but if they did, the commands would look like this: 
+
+sqlite> select author, total_copies, name
+   ...> from books
+   ...> inner join locations
+   ...> on books.location = locations.id;
+
+Marcel Proust|3|Lincoln Belmont Branch
+Leo Tolstoy|5|Harold Washington Library Center
+Gustave Flaubert|8|Logan Square Branch
+Herman Melville|1|Wrightwood Ashburn Branch
+Charles Dickens|7|Logan Square Branch
+George Eliot|3|Wrightwood Ashburn Branch
+
+
+sqlite> select total_copies, availability, name
+   ...> from books
+   ...> left join locations
+   ...> on books.location = locations.id;
+
+3|true|Lincoln Belmont Branch
+5|true|Harold Washington Library Center
+8|true|Logan Square Branch
+1|false|Wrightwood Ashburn Branch
+7|false|Logan Square Branch
+3|false|Wrightwood Ashburn Branch
+sqlite>
