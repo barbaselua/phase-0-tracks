@@ -1,0 +1,103 @@
+ Release 2
+1. Display the information in one table (either table is fine).
+
+
+sqlite> SELECT * FROM books;
+
+1|Marcel Proust|In search of lost time|3|true|1
+2|Miguel de Cervantes|Don Quixote|2|false|3
+3|Leo Tolstoy|Ana Karenina|5|true|3
+4|Gustave Flaubert|Madame Bovary|8|true|2
+5|Herman Melville|Moby-Dick|1|false|4
+6|Charles Dickens|Great expectations|7|false|2
+7|George Eliot|Middlemarch|3|false|4
+
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE locations SET name="Harold Washington Library Center" WHERE name="Harold Washington";
+
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM books, locations WHERE books.location = locations.id;
+
+1|Marcel Proust|In search of lost time|3|true|1|1|Lincoln Belmont Branch
+2|Miguel de Cervantes|Don Quixote|2|false|3|3|Harold Washington Library Center
+3|Leo Tolstoy|Ana Karenina|5|true|3|3|Harold Washington Library Center
+4|Gustave Flaubert|Madame Bovary|8|true|2|2|Logan Square Branch
+5|Herman Melville|Moby-Dick|1|false|4|4|Wrightwood Ashburn Branch
+6|Charles Dickens|Great expectations|7|false|2|2|Logan Square Branch
+7|George Eliot|Middlemarch|3|false|4|4|Wrightwood Ashburn Branch
+
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT books.author, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+Marcel Proust|Lincoln Belmont Branch
+Miguel de Cervantes|Harold Washington Library Center
+Leo Tolstoy|Harold Washington Library Center
+Gustave Flaubert|Logan Square Branch
+Herman Melville|Wrightwood Ashburn Branch
+Charles Dickens|Logan Square Branch
+George Eliot|Wrightwood Ashburn Branch
+
+or
+
+sqlite> SELECT books.title, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+In search of lost time|Lincoln Belmont Branch
+Don Quixote|Harold Washington Library Center
+Ana Karenina|Harold Washington Library Center
+Madame Bovary|Logan Square Branch
+Moby-Dick|Wrightwood Ashburn Branch
+Great expectations|Logan Square Branch
+Middlemarch|Wrightwood Ashburn Branch
+
+or 
+sqlite> SELECT books.title, books.availability, locations.name FROM books JOIN locations ON books.location = locations.id;
+
+In search of lost time|true|Lincoln Belmont Branch
+Don Quixote|false|Harold Washington Library Center
+Ana Karenina|true|Harold Washington Library Center
+Madame Bovary|true|Logan Square Branch
+Moby-Dick|false|Wrightwood Ashburn Branch
+Great expectations|false|Logan Square Branch
+Middlemarch|false|Wrightwood Ashburn Branch
+
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM books where author = "Miguel de Cervantes";
+
+
+Release 3
+2. Try a few different joins in your database, and record the commands and the output in queries.txt.
+ # my locations table doesn't have enough columns to demonstrate the inner, left, right and full joins properly, but if they did, the commands would look like this: 
+
+sqlite> select author, total_copies, name
+   ...> from books
+   ...> inner join locations
+   ...> on books.location = locations.id;
+
+Marcel Proust|3|Lincoln Belmont Branch
+Leo Tolstoy|5|Harold Washington Library Center
+Gustave Flaubert|8|Logan Square Branch
+Herman Melville|1|Wrightwood Ashburn Branch
+Charles Dickens|7|Logan Square Branch
+George Eliot|3|Wrightwood Ashburn Branch
+
+
+sqlite> select total_copies, availability, name
+   ...> from books
+   ...> left join locations
+   ...> on books.location = locations.id;
+
+3|true|Lincoln Belmont Branch
+5|true|Harold Washington Library Center
+8|true|Logan Square Branch
+1|false|Wrightwood Ashburn Branch
+7|false|Logan Square Branch
+3|false|Wrightwood Ashburn Branch
+sqlite>
