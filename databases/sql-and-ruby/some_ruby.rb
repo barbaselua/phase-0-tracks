@@ -1,6 +1,7 @@
 require 'sqlite3'
 
 db = SQLite3::Database.new("flights.db")
+db.results_as_hash = TRUE
 
 create_table = <<-SQL 
 CREATE TABLE IF NOT EXISTS flights(
