@@ -12,3 +12,4 @@ CREATE TABLE IF NOT EXISTS flights(
   clear_for_take_off BOOLEAN
   )
 SQL
+ db.execute(create_table)
