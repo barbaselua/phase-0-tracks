@@ -12,4 +12,10 @@ CREATE TABLE IF NOT EXISTS flights(
   clear_for_take_off BOOLEAN
   )
 SQL
- db.execute(create_table)
+db.execute(create_table)
+
+def create_flight(db, company_name, destination, passenger_no, departure_time, clear_for_take_off)
+  db.execute("INSERT INTO flights(company_name, destination, passenger_no, departure_time, clear_for_take_off") 
+  VALUES (?, ?, ?, ?, ?), [company_name, destination, passenger_no, departure_time, clear_for_take_off]
+end
+
