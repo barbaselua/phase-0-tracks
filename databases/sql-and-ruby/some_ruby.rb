@@ -1,4 +1,5 @@
 require 'sqlite3'
+require 'faker'
 
 db = SQLite3::Database.new("flights.db")
 db.results_as_hash = TRUE
