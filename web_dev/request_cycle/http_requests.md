@@ -1,4 +1,5 @@
 What are some common HTTP status codes?
+
 200 OK
 300 Multiple Choices
 301 Moved Permanently
@@ -14,3 +15,7 @@ What are some common HTTP status codes?
 501 Not Implemented
 503 Service Unavailable
 550 Permission denied
+
+
+What is the difference between a GET request and a POST request? When might each be used?
+GET requests data from a specified resource and POST submits data to be processed to a specified resource. A GET request is used for viewing something, retrieving data without any side-effect without changing it (access an HTML page) and POST is used for changing something, for sending data to the server (save customer information to a database).
