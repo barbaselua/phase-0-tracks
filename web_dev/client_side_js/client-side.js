@@ -1,13 +1,13 @@
 // alter page
 document.body.style.backgroundColor = "orange";
-
+var photo = document.getElementById("lizard-photo");
 photo.style.border = "2px solid black";
 document.body.style.color = "green";
 // FUNCTIONS:
 // hide photo - call the function 'blendLizard' with an event (action), do this 'hide photo'
 function blendLizard (event) {
   photo.hidden = true
-
+}
 // reveal photo - call the function 'revealLizard' with an event (action), do this 'reveal photo'
 function revealLizard (event) {
   photo.hidden = false
