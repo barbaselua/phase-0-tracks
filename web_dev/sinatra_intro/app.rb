@@ -54,11 +54,20 @@ end
 
 # write a GET route with a query parameter
 
-get '/' do
-  name = params[:name]
-  if name 
-    "Good job, #{name}!"
-  else
-    "Good job!"
-  end
-end 
+# get '/' do
+#   name = params[:name]
+#   if name 
+#     "Good job, #{name}!"
+#   else
+#     "Good job!"
+#   end
+# end 
+
+#write a GET route that uses route parameters to add 2 numbers and return the result
+
+get '/adder/:number1/:number2' do 
+  number1 = params[:number1].to_i
+  number2 = params[:number2].to_i
+  adder = number1 + number2
+  "The sum of #{number1} and #{number2} is #{adder}."
+end
