@@ -9,9 +9,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-# get '/' do
-#   "#{params[:name]} is #{params[:age]} years old."
-# end
+get '/' do
+  "#{params[:name]} is #{params[:age]} years old."
+end
 
 # write a GET route with
 # route parameters
@@ -54,14 +54,14 @@ end
 
 # write a GET route with a query parameter
 
-# get '/' do
-#   name = params[:name]
-#   if name 
-#     "Good job, #{name}!"
-#   else
-#     "Good job!"
-#   end
-# end 
+get '/good_job/' do
+  name = params[:name]
+  if name 
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end 
 
 #write a GET route that uses route parameters to add 2 numbers and return the result
 
@@ -70,4 +70,9 @@ get '/adder/:number1/:number2' do
   number2 = params[:number2].to_i
   adder = number1 + number2
   "The sum of #{number1} and #{number2} is #{adder}."
+end
+# BONUS 
+get '/certain_name/:name' do
+specific_name = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+specific_name.to_s
 end
