@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require 'sinatra/reloader' if development?
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -8,9 +9,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+# get '/' do
+#   "#{params[:name]} is #{params[:age]} years old."
+# end
 
 # write a GET route with
 # route parameters
@@ -43,4 +44,30 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+# write a GET route that displays an address
+
+get '/contact' do 
+  "123 Main Street, City, State, 12345"
+end 
+
+# write a GET route with a query parameter
+
+# get '/' do
+#   name = params[:name]
+#   if name 
+#     "Good job, #{name}!"
+#   else
+#     "Good job!"
+#   end
+# end 
+
+#write a GET route that uses route parameters to add 2 numbers and return the result
+
+get '/adder/:number1/:number2' do 
+  number1 = params[:number1].to_i
+  number2 = params[:number2].to_i
+  adder = number1 + number2
+  "The sum of #{number1} and #{number2} is #{adder}."
 end
