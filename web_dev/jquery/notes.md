@@ -1,0 +1,11 @@
+- find a good jquery beginner's tutorial;
+	- take notes while watching;
+	- code along;
+	- dedicate no more than an hour to this;
+- find a good jquery article/book;
+	- go through the basics of jquery;
+	- add some more notes;
+	- bookmark it;
+	- use it later on as needed;
+	- dedicate no more than an hour to this;
+- implement your new knowledge into a small project;  	
